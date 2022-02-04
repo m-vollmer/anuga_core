@@ -27,6 +27,13 @@ domain.set_name('spiral_wall')               # Output name
 # Setup initial conditions
 #------------------------------------------------------------------------------
 
+
+# Define wall polygon - circle wall
+
+#def circle_wall_polygon():
+#    P = [[]]
+#is_inside_polygon(point, polygon, closed=True, verbose=False):
+
 def topography(x, y):
 
     # Define topography for spiral wall
