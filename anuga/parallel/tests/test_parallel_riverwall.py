@@ -63,7 +63,9 @@ class Test_parallel_riverwall(unittest.TestCase):
         os.remove(mesh_file)
 
     def test_that_sequential_and_parallel_outputs_are_identical(self):
-        from anuga.file.sww import sww_files_are_equal
+        # This import cannot take place at the top level as it interferes 
+        # with parallel execution.
+        from anuga.file.sww_data import sww_files_are_equal
         assert sww_files_are_equal(sequential_sww_file, parallel_sww_file)         
 
 if __name__ == "__main__":

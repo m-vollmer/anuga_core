@@ -257,7 +257,7 @@ class Test_plot_utils(unittest.TestCase):
         """
         # Run flowAlg_test_basic for a range of flow algorithms
         for flowAlg in flow_algorithms:
-            if(verbose):
+            if verbose:
                 print(flowAlg)
             self.create_domain(
                 InitialOceanStage=1., InitialLandStage=0., flowAlg=flowAlg, verbose=verbose)
@@ -484,6 +484,6 @@ class Test_plot_utils(unittest.TestCase):
 ################################################################################
 if __name__ == "__main__":
     # _triangle_containing_point')
-    suite = unittest.makeSuite(Test_plot_utils, 'test')
+    suite = unittest.makeSuite(Test_plot_utils, 'test_basic')
     runner = unittest.TextTestRunner()
     runner.run(suite)

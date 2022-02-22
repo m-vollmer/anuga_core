@@ -37,7 +37,7 @@ from anuga import distribute, myid, numprocs, send, receive, barrier, finalize
 from anuga.parallel.sequential_distribute import sequential_distribute_dump
 from anuga.parallel.sequential_distribute import sequential_distribute_load
 
-import anuga.utilities.plot_utils as util
+from anuga.file.sww_data import get_output, get_centroids
 
 
 #--------------------------------------------------------------------------
@@ -139,14 +139,14 @@ def run_simulation(parallel=False, verbose=False):
     if myid == 0:
         if verbose: print('COMPARING SWW FILES')
         
-        odomain_v = util.get_output('odomain.sww')
-        odomain_c = util.get_centroids(odomain_v)
+        odomain_v = get_output('odomain.sww')
+        odomain_c = get_centroids(odomain_v)
 
-        pdomain_v = util.get_output('pdomain.sww')
-        pdomain_c = util.get_centroids(pdomain_v)
+        pdomain_v = get_output('pdomain.sww')
+        pdomain_c = get_centroids(pdomain_v)
         
-        sdomain_v = util.get_output('sdomain.sww')
-        sdomain_c = util.get_centroids(sdomain_v)
+        sdomain_v = get_output('sdomain.sww')
+        sdomain_c = get_centroids(sdomain_v)
 
         # Test some values against the original ordering
         
