@@ -42,9 +42,10 @@ DOWNLOAD_URL = "http://sourceforge.net/projects/anuga/"
 
 # We can actually import a restricted version of anuga that
 # does not need the compiled code
-import anuga
+#import anuga
 
-VERSION = anuga.__version__
+#VERSION = anuga.__version__
+VERSION = 3.0
 
 
 
@@ -132,9 +133,9 @@ def configuration(parent_package='', top_path=None):
 
 def setup_package():
 
-    from anuga.utilities.system_tools import store_git_revision_info
+    #from anuga.utilities.system_tools import store_git_revision_info
 
-    store_git_revision_info(destination_path='anuga')
+    #store_git_revision_info(destination_path='anuga')
 
     metadata = dict(name=DISTNAME,
                     maintainer=MAINTAINER,
@@ -156,8 +157,9 @@ def setup_package():
                                  'Operating System :: POSIX',
                                  'Operating System :: Unix',
                                  'Operating System :: MacOS',
-                                 'Programming Language :: Python :: 2.6',
-                                 'Programming Language :: Python :: 2.7',
+                                 'Programming Language :: Python :: 3.6',
+                                 'Programming Language :: Python :: 3.7',
+                                 'Programming Language :: Python :: 3.8',
                                  ],
                     cmdclass={'clean': CleanCommand},
                     **extra_setuptools_args)
