@@ -18,7 +18,7 @@ wget https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O m
 
 chmod +x miniconda.sh && ./miniconda.sh -b
 
-export PATH=/Users/travis/miniconda3/bin:$PATH
+export PATH=~/miniconda3/bin:$PATH
 
 #conda update --yes conda
 
